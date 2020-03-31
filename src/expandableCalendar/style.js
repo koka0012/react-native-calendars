@@ -142,6 +142,7 @@ export default function styleConstructor(theme = {}) {
       marginLeft: appStyle.todayButtonPosition === 'right' ? 7 : undefined,
       marginRight: appStyle.todayButtonPosition === 'right' ? undefined : 7
     },
-    ...(theme[STYLESHEET_ID] || {})
+    ...(theme[STYLESHEET_ID] || {}),
+    ...(appStyle.override || {})
   });
 }
